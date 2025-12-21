@@ -1,10 +1,10 @@
 
 import './App.css'
 import ImageSlider from './Components/Image Slider'
-import SliderOfImage from './Components/test'
+import SliderOfImage from './Components/Image Slider'
 import RandomColor from './Components/RandomColor'
 import StarRating from './Components/star_rating'
-import QRCodeGenerator from './Components/qr-code-generator'
+import QRCodeGenerator from './Components/Qr_code'
 
 function App() {
 
