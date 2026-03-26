@@ -3,7 +3,6 @@ import { FaUser } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa";
 
 const AvailablePlayers = ({ players }) => {
-  console.log(players);
   return (
     <div className="grid grid-cold-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
       {players.map((player) => {

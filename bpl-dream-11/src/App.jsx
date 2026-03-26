@@ -10,7 +10,7 @@ const fetchPlayer = async () => {
 
 function App() {
   const playerPromise = fetchPlayer();
-  console.log(playerPromise);
+
   return (
     <>
       <Navbar></Navbar>
