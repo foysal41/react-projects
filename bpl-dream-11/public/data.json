@@ -6,7 +6,7 @@
     "rating": 9.5,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm medium",
-    "price": 1500000,
+    "price": 500,
     "playerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/250px-Virat_Kohli_in_PMO_New_Delhi.jpg"
   },
   {
@@ -16,7 +16,7 @@
     "rating": 9.2,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm offbreak",
-    "price": 1400000,
+    "price": 300,
     "playerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Babar_azam_2023.jpg/250px-Babar_azam_2023.jpg"
   },
   {
@@ -26,7 +26,7 @@
     "rating": 9.0,
     "battingStyle": "Left-hand bat",
     "bowlingStyle": "Right-arm fast-medium",
-    "price": 1600000,
+    "price": 800,
     "playerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/3_14_Captain_Ben_%28cropped%29.jpg/250px-3_14_Captain_Ben_%28cropped%29.jpg"
   },
   {
@@ -36,7 +36,7 @@
     "rating": 9.3,
     "battingStyle": "Left-hand bat",
     "bowlingStyle": "Left-arm orthodox",
-    "price": 1300000,
+    "price": 2000,
     "playerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Shakib_Al_Hasan_%284%29_%28cropped%29.jpg/250px-Shakib_Al_Hasan_%284%29_%28cropped%29.jpg"
   },
   {
@@ -45,8 +45,8 @@
     "playerType": "Batsman",
     "rating": 8.9,
     "battingStyle": "Right-hand bat",
-    "bowlingStyle": "Right-arm offbreak",
-    "price": 1250000,
+    "bowlingStyle": "Right-arm off break",
+    "price": 30000,
     "playerImage": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Kane_Williamson_in_2019.jpg"
   }
 ]

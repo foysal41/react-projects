@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa";
+import Players from "./../Players";
 
-const AvailablePlayers = ({ players }) => {
+const AvailablePlayers = ({ players, setCoin, coin }) => {
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleChoosePlayer = (player) => {
+    let newCoin = coin - player.price;
+    if (newCoin >= 0) {
+      setCoin(coin - player.price);
+    } else {
+      alert("Not enougth coin");
+      return;
+    }
+
+    alert(`${player.playerName} is selected`);
+    setIsSelected(true);
+  };
+
   return (
     <div className="grid grid-cold-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
       {players.map((player) => {
@@ -39,7 +55,12 @@ const AvailablePlayers = ({ players }) => {
 
               <div className="card-actions justify-end">
                 <p className="font-semibold">Price: ${player.price}</p>
-                <button className="btn">{player.playerName}</button>
+                <button
+                  className="btn"
+                  onClick={() => handleChoosePlayer(player)}
+                >
+                  {isSelected === true ? "Selected" : "Choose Player"}
+                </button>
               </div>
             </div>
           </div>

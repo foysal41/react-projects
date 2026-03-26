@@ -2,10 +2,10 @@ import React, { use, useState } from "react";
 import AvailablePlayers from "./AvailablePlayers/AvailablePlayers";
 import SelectedPlayers from "./SelectedPlayers/SelectedPlayers";
 
-const Players = ({ playerPromise }) => {
+const Players = ({ playerPromise, setCoin, coin }) => {
   const players = use(playerPromise);
   const [selectedType, setSelectedType] = useState("available");
-  console.log(selectedType);
+
   return (
     <div className="container mx-auto my-15">
       <div className="flex justify-between gap-4 items-center mb-5">
@@ -32,7 +32,11 @@ const Players = ({ playerPromise }) => {
       </div>
 
       {selectedType === "available" ? (
-        <AvailablePlayers players={players}></AvailablePlayers>
+        <AvailablePlayers
+          players={players}
+          setCoin={setCoin}
+          coin={coin}
+        ></AvailablePlayers>
       ) : (
         <SelectedPlayers></SelectedPlayers>
       )}
