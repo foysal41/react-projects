@@ -5,6 +5,7 @@ import SelectedPlayers from "./SelectedPlayers/SelectedPlayers";
 const Players = ({ playerPromise, setCoin, coin }) => {
   const players = use(playerPromise);
   const [selectedType, setSelectedType] = useState("available");
+  const [selectedPlayers, setSelectedPlayers] = useState([])
 
   return (
     <div className="container mx-auto my-15">
@@ -36,9 +37,12 @@ const Players = ({ playerPromise, setCoin, coin }) => {
           players={players}
           setCoin={setCoin}
           coin={coin}
+          selectedPlayers={selectedPlayers}
+          setSelectedPlayers={setSelectedPlayers}
+
         ></AvailablePlayers>
       ) : (
-        <SelectedPlayers></SelectedPlayers>
+        <SelectedPlayers selectedPlayers={selectedPlayers} ></SelectedPlayers>
       )}
     </div>
   );
