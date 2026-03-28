@@ -23,7 +23,7 @@ const AvailablePlayers = ({
 
     alert(`${player.playerName} is selected`);
     setIsSelected(true);
-    setSelectedPlayers(...selectedPlayers, player);
+    setSelectedPlayers([...selectedPlayers, player]);
   };
 
   return (

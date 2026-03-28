@@ -2,7 +2,7 @@ import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/Homepage/Banner/Banner";
 import Navbar from "./components/Homepage/Navbar/Navbar";
-import Players from "./components/Homepage/Players/Players";
+import Players from "./components/Homepage/Players/players";
 const fetchPlayer = async () => {
   const res = await fetch("/data.json");
   return res.json();
