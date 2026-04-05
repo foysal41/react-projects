@@ -1,9 +1,10 @@
 import React from "react";
+import Banner from "../../components/shared/Navbar/Homepage/Banner";
 
 const Homepage = () => {
   return (
     <div>
-      <h3>Home page</h3>
+      <Banner></Banner>
     </div>
   );
 };
