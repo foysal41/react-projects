@@ -1,6 +1,7 @@
 import React from "react";
 
 import { FaRegStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 const BookCard = ({ books }) => {
   return (
@@ -9,7 +10,11 @@ const BookCard = ({ books }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {books.map((book) => (
-          <div key={book.bookId} className="card bg-base-100 shadow-sm">
+          <Link
+            to={`/bookDetails/${book.bookId}`}
+            key={book.bookId}
+            className="card bg-base-100 shadow-sm"
+          >
             <figure className="p-6">
               <img
                 className="rounded-xl h-[250px]"
@@ -34,7 +39,7 @@ const BookCard = ({ books }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
