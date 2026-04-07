@@ -1,3 +1,5 @@
+import { BookContext } from "../../context/Bookprovider";
+import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const BookDetails = () => {
@@ -19,6 +21,8 @@ const BookDetails = () => {
     yearOfPublishing,
   } = expectedBook;
 
+  const { handleMarkAsRead, storeBooks } = useContext(BookContext);
+  console.log(handleMarkAsRead, storeBooks, "BookContext");
   return (
     <div className="card lg:card-side bg-base-100 shadow-sm container mx-auto">
       <figure>
@@ -52,7 +56,12 @@ const BookDetails = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <button className="btn ">Read</button>
+            <button
+              onClick={() => handleMarkAsRead(expectedBook)}
+              className="btn "
+            >
+              Read
+            </button>
             <button className="btn btn-primary">Wishlist</button>
           </div>
         </div>
