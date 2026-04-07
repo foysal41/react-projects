@@ -21,7 +21,7 @@ const BookDetails = () => {
     yearOfPublishing,
   } = expectedBook;
 
-  const { handleMarkAsRead, storeBooks } = useContext(BookContext);
+  const { handleMarkAsRead, storeBooks , handleWishList} = useContext(BookContext);
   console.log(handleMarkAsRead, storeBooks, "BookContext");
   return (
     <div className="card lg:card-side bg-base-100 shadow-sm container mx-auto">
@@ -62,7 +62,7 @@ const BookDetails = () => {
             >
               Read
             </button>
-            <button className="btn btn-primary">Wishlist</button>
+            <button className="btn btn-primary" onClick={() => handleWishList(expectedBook)} >Wishlist</button>
           </div>
         </div>
       </div>
