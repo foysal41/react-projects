@@ -22,7 +22,7 @@ const BookDetails = () => {
   } = expectedBook;
 
   const { handleMarkAsRead, storeBooks , handleWishList} = useContext(BookContext);
-  console.log(handleMarkAsRead, storeBooks, "BookContext");
+ 
   return (
     <div className="card lg:card-side bg-base-100 shadow-sm container mx-auto">
       <figure>
