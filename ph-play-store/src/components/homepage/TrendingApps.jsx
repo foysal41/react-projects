@@ -2,31 +2,14 @@ import React, { use, useEffect, useState } from "react";
 import Card from "../ui/Card";
 import { HashLoader } from "react-spinners";
 import { Link } from "react-router";
+import useApps from "../../hooks/useApps";
 
 // const appsPromise = fetch('/data.json').then((res)=>res.json())
 function TrendingApps() {
   // const apps = use(appsPromise)
   // console.log(apps)
 
-  const [apps, setApps] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/data.json");
-      const data = await res.json();
-
-      setTimeout(() => {
-        setApps(data);
-      setLoading(false);
-      }, 2000)
-      
-    };
-
-    fetchData();
-  }, []);
-
-  console.log(apps);
+  const {apps, loading} = useApps()
   return (
     <div className="container mx-auto my-15">
 

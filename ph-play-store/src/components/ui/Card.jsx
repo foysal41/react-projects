@@ -4,7 +4,7 @@ function Card({app}) {
   return (
       <div  className="card bg-base-100 w-96 shadow-sm">
           <figure>
-            <img src={app.image} alt={app.title}/>
+            <img className='h-[300px] w-auto' src={app.image} alt={app.title}/>
           </figure>
           <div className="card-body">
             <h2 className="card-title">{app.title}</h2>
