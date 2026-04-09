@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import MyNavLink from "./MyNavLink";
 
 export default function Navbar() {
+  
   return (
     <nav className=" bg-white shadow py-2">
       <div className="flex justify-between gap-4 items-center container mx-auto">
