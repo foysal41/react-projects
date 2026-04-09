@@ -2,6 +2,7 @@ import React from "react";
 import logoImg from "../../assets/images/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
+import MyNavLink from "./MyNavLink";
 
 export default function Navbar() {
   return (
@@ -10,18 +11,21 @@ export default function Navbar() {
         <img src={logoImg} alt="" className="w-15" />
         <ul className="flex justify-between gap-2 items-center">
           <li>
-            <NavLink to="/" className={({isActive})=> (  `${isActive ? 'text-purple-500 border border-b-purple-500' : ''}`)}>Home</NavLink>
-           
+            <MyNavLink to={"/"} >Home</MyNavLink>
+         
           </li>
           <li>
-            <NavLink to="/app"className={({isActive})=> (  `${isActive ? 'text-purple-500 border border-b-purple-500' : ''}`)}>Apps</NavLink>
+            <MyNavLink to={"/app"}>Apps</MyNavLink>
           </li>
           <li>
-            <NavLink to="/installedApp"className={({isActive})=> (  `${isActive ? 'text-purple-500 border border-b-purple-500' : ''}`)}>Installation App</NavLink>
+             <MyNavLink to={"/installedApp"}> Installation Apps</MyNavLink>
           </li>
         </ul>
 
-        <button className="btn bg-purple-500 text-white"><FaGithub />Contribute</button>
+        <button className="btn bg-purple-500 text-white">
+          <FaGithub />
+          Contribute
+        </button>
       </div>
     </nav>
   );
