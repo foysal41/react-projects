@@ -1,5 +1,8 @@
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "./components/shared/Header";
+import BrakingNews from "./components/shared/BrakingNews";
+import Navbar from "./components/shared/Navbar";
 
 const poppins = Poppins({
   variable: "--font-poppins",
