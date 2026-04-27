@@ -31,7 +31,6 @@ const NewsCategoryPage = async ({ params }) => {
         <div className="space-y-4">
           {news.length > 0 ? (
             news.map((singleNews, idx) => {
-              console.log(singleNews);
               return <NewsCard key={idx} singleNews={singleNews}></NewsCard>;
             })
           ) : (
