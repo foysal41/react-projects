@@ -1,4 +1,5 @@
 import LeftSidebar from "@/app/components/homepage/news/LeftSidebar";
+import NewsCard from "@/app/components/homepage/news/NewsCard";
 import RightSidebar from "@/app/components/homepage/news/RightSidebar";
 import React from "react";
 async function getCategory() {
@@ -30,11 +31,8 @@ const NewsCategoryPage = async ({ params }) => {
         <div className="space-y-4">
           {news.length > 0 ? (
             news.map((singleNews, idx) => {
-              return (
-                <div key={idx} className="p-6 rounded-md border ">
-                  {singleNews.title}
-                </div>
-              );
+              console.log(singleNews);
+              return <NewsCard key={idx} singleNews={singleNews}></NewsCard>;
             })
           ) : (
             <h3 className="font-bold text-4xl text-center my-7 mt-6">
